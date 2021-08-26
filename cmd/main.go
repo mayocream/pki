@@ -1,10 +1,3 @@
-# pki
-
-## Go Package
-
-Print X.509 Certificate like `openssl x509 -text` or Certificate Request like `openssl csr -text`.  
-
-```go
 package main
 
 import (
@@ -59,4 +52,3 @@ func main() {
         fmt.Println(info)
     }
 }
-```
