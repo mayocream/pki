@@ -8,7 +8,7 @@ copy-wasm-js:
 	cp $(GOROOT)/misc/wasm/wasm_exec.js ./dist
 
 build-pki-wasm:
-	GOOS=js GOARCH=wasm go build -o dist/pki.wasm pki/*.go
+	tinygo build -target wasm -o dist/pki.wasm ./pki
 
 test: build
 	cp -r dist test/dist
