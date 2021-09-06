@@ -4,6 +4,7 @@ import { ChakraProvider, Container, useColorModeValue } from '@chakra-ui/react'
 
 import Layout from './layout'
 import Certinfo from './pages/certinfo'
+import 'twin.macro'
 
 const Home = (props: any) => <div>Hello</div>
 
