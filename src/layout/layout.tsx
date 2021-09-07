@@ -37,7 +37,7 @@ import {
 } from 'react-icons/fi'
 import { IconType } from 'react-icons'
 import { ReactText } from 'react'
-import i18n from './i18n'
+import i18n from '../i18n'
 
 interface LinkItemProps {
   name: string
@@ -187,7 +187,9 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
               bg={useColorModeValue('white', 'gray.900')}
               borderColor={useColorModeValue('gray.200', 'gray.700')}
             >
-              {i18n.languages.map(lang => <MenuItem key={lang}>{lang}</MenuItem>)}
+              {i18n.languages.map((lang) => (
+                <MenuItem key={lang}>{lang}</MenuItem>
+              ))}
             </MenuList>
           </Menu>
         </Flex>

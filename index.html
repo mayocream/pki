@@ -12,11 +12,9 @@
   <div id="root"></div>
   <script src="./wasm/dist/wasm_exec.js"></script>
   <script type="module">
-    (async () => {
-      const go = new Go()
-      await WebAssembly.instantiateStreaming(fetch('./wasm/dist/pki.wasm'), go.importObject).then((result) => {
-        go.run(result.instance)
-      })
+    const go = new Go()
+    WebAssembly.instantiateStreaming(fetch('./wasm/dist/pki.wasm'), go.importObject).then((result) => {
+      go.run(result.instance)
     })
   </script>
   <script type="module" src="/src/main.tsx"></script>

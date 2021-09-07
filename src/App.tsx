@@ -2,7 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router'
 import { ChakraProvider, Container, useColorModeValue } from '@chakra-ui/react'
 
-import Layout from './layout'
+import Layout from './layout/layout'
 import Certinfo from './pages/certinfo'
 import 'twin.macro'
 
