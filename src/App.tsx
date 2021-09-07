@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router } from '@reach/router'
-import { ChakraProvider, Container, useColorModeValue } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 
 import Layout from './layout/layout'
 import Certinfo from './pages/certinfo'
@@ -12,12 +12,10 @@ function App() {
   return (
     <ChakraProvider>
       <Layout>
-        <Container bg={useColorModeValue('white', 'gray.900')}>
-          <Router>
-            <Home path="/" />
-            <Certinfo path="/certinfo" />
-          </Router>
-        </Container>
+        <Router>
+          <Home path="/" />
+          <Certinfo path="/certinfo" />
+        </Router>
       </Layout>
     </ChakraProvider>
   )

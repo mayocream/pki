@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, Textarea, Code } from '@chakra-ui/react'
+import { Text, Textarea, Code, Box } from '@chakra-ui/react'
 import * as pki from '../pki'
 
 export default function Certinfo(props: any) {
@@ -21,12 +21,12 @@ export default function Certinfo(props: any) {
       <Text mb="8px">Cert or CSR: </Text>
       <Textarea value={value} onChange={handleInputChange} placeholder="Here is a sample placeholder" size="sm" />
 
-      <div>
+      <Box mb="120px">
         output:
         <pre>
           <code>{output}</code>
         </pre>
-      </div>
+      </Box>
     </>
   )
 }

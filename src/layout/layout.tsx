@@ -3,12 +3,12 @@ import { Link as ReachLink } from '@reach/router'
 import { useTranslation } from 'react-i18next'
 import {
   IconButton,
-  Avatar,
+  // Avatar,
   Box,
   CloseButton,
   Flex,
   HStack,
-  VStack,
+  // VStack,
   Icon,
   useColorModeValue,
   Link,
@@ -20,23 +20,25 @@ import {
   FlexProps,
   Menu,
   MenuButton,
-  MenuDivider,
+  // MenuDivider,
   MenuItem,
   MenuList,
+  // ChakraProvider,
+  // Container,
 } from '@chakra-ui/react'
 import {
   FiHome,
-  FiTrendingUp,
-  FiCompass,
-  FiStar,
-  FiSettings,
+  // FiTrendingUp,
+  // FiCompass,
+  // FiStar,
+  // FiSettings,
   FiMenu,
   FiBell,
   FiChevronDown,
   FiInfo,
 } from 'react-icons/fi'
 import { IconType } from 'react-icons'
-import { ReactText } from 'react'
+// import { ReactText } from 'react'
 import i18n from '../i18n'
 
 interface LinkItemProps {
@@ -70,8 +72,10 @@ export default function SidebarWithHeader({ children }: { children: ReactNode })
       </Drawer>
       {/* mobilenav */}
       <MobileNav onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 0 }} p="4">
-        {children}
+      <Box ml={{ base: 0, md: 60 }} p="4" height="calc(100vh - 80px)">
+        <Box bg={useColorModeValue('white', 'gray.900')} p="4" borderRadius="4" boxShadow="base">
+          {children}
+        </Box>
       </Box>
     </Box>
   )
