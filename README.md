@@ -1,4 +1,6 @@
 # pki
+![go](https://github.com/mayocream/pki/actions/workflows/go.yml/badge.svg)
+![node](https://github.com/mayocream/pki/actions/workflows/node.yml/badge.svg)
 
 ## Develoment
 
